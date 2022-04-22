@@ -1,0 +1,18 @@
+Realtime Project Notes:
+* Create new node project (dummy package.json file) by using: npm init 
+It will ask some project metadata, press "enter" if you want to keep it default
+package.json will be created
+Lets install dependencies which are required for the project
+Find dependencies from official documentation (website)
+https://github.com/angular/protractor/blob/5.4.1/exampleTypescript/package.json
+Add dependencies in package.json file (write all in file), then use command: npm install
+@types are used to convert particular node(js) modules in typescript, as node doesn't understand ts.
+* Create test spec file (typescript) to open official protractor website in jasmine + typescript for now.
+Now create ts configuration file (conf.ts) to run test spec file
+Protractor compiler is designed to run js files only, so we need to convert ts file to js for successful run.
+* Create tsconfig json file using command: tsc --init (or tsc.cmd --init on powershell)
+https://github.com/angular/protractor/blob/5.4.1/exampleTypescript/tsconfig.json 
+It will help to convert typescript to javascript
+compile all ts file to js using command: tsc (or tsc.cmd)
+now run your specs using command: protractor JSFiles/conf.js
+Demo test case runs successfully in chrome browser
