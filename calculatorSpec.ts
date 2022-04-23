@@ -1,4 +1,4 @@
-import { browser, by, element } from "protractor"
+import { browser } from "protractor";
 
 describe('Calculate operations', function(){
     it('Open calculator demo website', function(){
