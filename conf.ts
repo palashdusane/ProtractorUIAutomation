@@ -6,7 +6,7 @@ export let config: Config = {
   capabilities: {
     browserName: 'chrome'
   },
-  specs: [ 'testspec.js' ],
+  specs: [ 'testSpec.js', 'calculatorSpec.js' ],
   
   // You could set no globals to true to avoid jQuery '$' and protractor '$'
   // collisions on the global namespace.
