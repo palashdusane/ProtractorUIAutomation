@@ -1,7 +1,8 @@
-import { browser } from "protractor"
+import { browser, by, element } from "protractor"
 
 describe('Calculate operations', function(){
     it('Open calculator demo website', function(){
         browser.get('http://juliemr.github.io/protractor-demo/');
+        expect(browser.getTitle()).toEqual('Super Calculator');
     });
 });
