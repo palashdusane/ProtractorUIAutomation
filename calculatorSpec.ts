@@ -1,15 +1,17 @@
-import { browser, by, element } from "protractor";
+import { browser } from "protractor";
+import { calculator } from "./pageObjects/calculator.po";
 
 describe('Calculate operations', async()=>{
+    let calcObject = new calculator();
     it('Open calculator demo website', async()=>{
         await browser.get('http://juliemr.github.io/protractor-demo/');
         await expect(browser.getTitle()).toEqual('Super Calculator');
-    });
+    });0
 
     it('Add two numbers', async()=>{
-        await element(by.model('first')).sendKeys(3);
-        await element(by.model('second')).sendKeys(3);
-        await element(by.id('gobutton')).click();       
-        await expect(element(by.xpath('//h2[@class ="ng-binding"]')).getText()).toEqual('6');
+        await calcObject.firstCalcInput.sendKeys(3);
+        await calcObject.secondCalcInput.sendKeys(3);
+        await calcObject.goButton.click();       
+        await expect(calcObject.resultElement.getText()).toEqual('6');
     });
 });
