@@ -4,7 +4,10 @@
   "description": "Framework for Protractor UI Automation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "protractor JSFiles/conf.js",
+    "pretest": "tsc",
+    "protractor": "node ./node_modules/protractor/built/cli.js",
+    "webdriver-update":"node ./node_modules/protractor/bin/webdriver-manager update"
   },
   "author": "Palash Dusane",
   "license": "ISC",
