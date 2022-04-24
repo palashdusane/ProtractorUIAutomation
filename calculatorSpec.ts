@@ -11,5 +11,5 @@ describe('Calculate operations', async()=>{
         await element(by.model('second')).sendKeys(3);
         await element(by.id('gobutton')).click();       
         await expect(element(by.xpath('//h2[@class ="ng-binding"]')).getText()).toEqual('6');
-    })
+    });
 });
